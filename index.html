@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Shen Fanshen — Projects</title>
+<meta name="description" content="Project index: urban data, research, products, games, comics and film.">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header class="site-header">
+  <a class="site-name" href="#/" id="site-name"></a>
+  <p class="tagline" id="tagline"></p>
+  <nav class="contact" id="contact" aria-label="Contact"></nav>
+</header>
+
+<main id="main">
+  <section id="index-view">
+    <div class="toolbar">
+      <div class="filters" id="filters" role="toolbar" aria-label="Filter projects"></div>
+      <div class="views" role="group" aria-label="Layout">
+        <button type="button" data-layout="grid" aria-pressed="true">Grid</button>
+        <button type="button" data-layout="list" aria-pressed="false">List</button>
+      </div>
+    </div>
+    <ul class="grid" id="grid"></ul>
+    <p class="empty" id="empty" hidden></p>
+  </section>
+
+  <article id="detail-view" class="detail" hidden></article>
+</main>
+
+<footer class="site-footer">
+  <p id="about"></p>
+  <p class="small"><span id="footer-name"></span> · <span id="count"></span></p>
+</footer>
+
+<noscript><p class="noscript">This index needs JavaScript. Project data: data/profile.js and data/projects.js</p></noscript>
+<script src="data/profile.js"></script>
+<script src="data/projects.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
