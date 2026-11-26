@@ -235,8 +235,8 @@ window.PROJECTS = [
     ],
     image: "images/thumbs/pingfan-laodeng.jpg",
     images: [
-      { src: "images/detail/pingfan-laodeng-comic.jpg", alt: "Xiaohongshu note of a two-panel comic. An old man tells a middle-aged man to wash the dishes and he answers OK; then the middle-aged man tells his wife to wash the dishes and she answers OK. The note shows 23.1k likes, 2,574 stars and 990 comments", caption: "From the Xiaohongshu note on how a Laodeng came to be (23.1k likes)." },
-      { src: "images/detail/pingfan-laodeng-stickers.jpg", alt: "WeChat sticker pack 平凡老登, 16 stickers, 3.1k downloads and 100.9k shares", caption: "WeChat sticker pack: 16 stickers, 3.1k downloads and 100.9k shares." }
+      { src: "images/detail/pingfan-laodeng-stickers.jpg", alt: "WeChat sticker pack 平凡老登, 16 stickers, 3.1k downloads and 100.9k shares", caption: "WeChat sticker pack: 16 stickers, 3.1k downloads and 100.9k shares." },
+      { src: "images/detail/pingfan-laodeng-comic.jpg", alt: "Xiaohongshu note of a two-panel comic. An old man tells a middle-aged man to wash the dishes and he answers OK; then the middle-aged man tells his wife to wash the dishes and she answers OK. The note shows 23.1k likes, 2,574 stars and 990 comments", caption: "From the Xiaohongshu note on how a Laodeng came to be (23.1k likes)." }
     ]
   },
   {
