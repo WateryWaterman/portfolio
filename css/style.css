@@ -77,6 +77,8 @@ a:focus-visible, button:focus-visible { outline: 2px solid var(--accent); outlin
 
 .video { margin: 0 0 32px; }
 .video iframe { width: 100%; aspect-ratio: 16 / 9; border: 1px solid var(--line); background: #111; }
+.video.pico8 { max-width: 621px; }
+.video.pico8 iframe { aspect-ratio: 621 / 513; }
 .video-note { margin: 8px 0 0; font-size: 0.9rem; }
 .gallery { margin: 32px 0 0; display: grid; gap: 20px; }
 .gallery figure { margin: 0; max-width: 100%; }

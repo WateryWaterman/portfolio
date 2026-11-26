@@ -19,7 +19,7 @@
  *   points      string[] optional key facts (from the CV)
  *   image       string   optional, e.g. "images/thumbs/foo.jpg" (16:10). No image = typographic tile.
  *   images      {src, alt, caption?}[]  optional figures on the detail page (falls back to `image`)
- *   embed       {type:"drive", id} or {type:"bilibili", bvid}  optional video on the detail page
+ *   embed       {type:"drive", id} or {type:"bilibili", bvid} or {type:"pico8", pid}  optional video / playable cart on the detail page
  *   draft       boolean  optional; true = thinking text is an assistant draft, rewrite it.
  *   tier        number   hidden sort key: CV tier (1, 1.5, 2...). Not displayed.
  *   hideInAll   boolean  optional; true = not on the All view, only under its own category.
@@ -125,7 +125,8 @@ window.PROJECTS = [
     image: "images/thumbs/shenzhen-shopping.jpg",
     images: [
       { src: "images/detail/shenzhen-shopping.jpg", alt: "StoryMap cover: Moving the shopping boundaries in Shenzhen", caption: "Published StoryMap cover." },
-      { src: "images/detail/shenzhen-hero.jpg", alt: "Architectural rendering of the Huanggang Port area used on the StoryMap", caption: "Cover image from the StoryMap." }
+      { src: "images/detail/shenzhen-flowchart.jpg", alt: "Flowchart of current-pattern analysis, scenario simulation with a gravity model, and recommendations", caption: "From raw trajectories to shopping trips, the Huff model, and four port-efficiency scenarios." },
+      { src: "images/detail/shenzhen-formula.jpg", alt: "Utility and multinomial logit formulas, with a diagram from 18 Hong Kong districts through 6 checkpoints to 264 Shenzhen shopping cells", caption: "Destination utility and the multinomial logit used to estimate shopper choice probabilities." }
     ],
     draft: true
   },
@@ -212,9 +213,8 @@ window.PROJECTS = [
     thinking: "PICO-8 bundles code, sprites, map tiles and 8-bit music in one virtual console, with detailed tutorials and an active community. A good entry point for a complete game: follow a tutorial, then add fun mechanics.\n\nCode is hand-written; most effects are math functions. No formal composition training, so the soundtrack came from basic chord knowledge and how tracks are layered. Published on the official BBS; bugs fixed from comments.",
     points: [],
     image: "images/thumbs/shmup-pico8.jpg",
-    images: [
-      { src: "images/detail/shmup-pico8.jpg", alt: "PICO-8 SHMUP title screen with alien rows and a play button", caption: "The cart on the official PICO-8 BBS." }
-    ]
+    images: [],
+    embed: { type: "pico8", pid: "myregularshmup", tid: "155662" }
   },
   {
     id: "pingfan-laodeng",
@@ -235,7 +235,8 @@ window.PROJECTS = [
     ],
     image: "images/thumbs/pingfan-laodeng.jpg",
     images: [
-      { src: "images/detail/pingfan-laodeng-comic.jpg", alt: "Two-panel comic. An old man tells a middle-aged man to wash the dishes and he answers OK; then the middle-aged man tells his wife to wash the dishes and she answers OK", caption: "From the Xiaohongshu note on how a Laodeng came to be (23.1k likes)." }
+      { src: "images/detail/pingfan-laodeng-comic.jpg", alt: "Xiaohongshu note of a two-panel comic. An old man tells a middle-aged man to wash the dishes and he answers OK; then the middle-aged man tells his wife to wash the dishes and she answers OK. The note shows 23.1k likes, 2,574 stars and 990 comments", caption: "From the Xiaohongshu note on how a Laodeng came to be (23.1k likes)." },
+      { src: "images/detail/pingfan-laodeng-stickers.jpg", alt: "WeChat sticker pack 平凡老登, 16 stickers, 3.1k downloads and 100.9k shares", caption: "WeChat sticker pack: 16 stickers, 3.1k downloads and 100.9k shares." }
     ]
   },
   {

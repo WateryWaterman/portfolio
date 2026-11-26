@@ -91,7 +91,8 @@
     return '<figure><img src="' + esc(src) + '" alt="' + esc(alt) + '">' + cap + "</figure>";
   }
   function gallery(p) {
-    var imgs = (p.images && p.images.length) ? p.images : (p.image ? [{ src: p.image, alt: p.title }] : []);
+    // An explicit empty images array means "no gallery" (e.g. a playable embed replaces it).
+    var imgs = Array.isArray(p.images) ? p.images : (p.image ? [{ src: p.image, alt: p.title }] : []);
     if (!imgs.length) return "";
     return '<div class="gallery">' + imgs.map(function (im) { return fig(im, p.title); }).join("") + "</div>";
   }
@@ -112,6 +113,14 @@
       return '<div class="video">' +
         '<iframe src="' + esc(src) + '" allow="autoplay" allowfullscreen title="' + esc(p.title) + ' video"></iframe>' +
         '<p class="video-note"><a href="' + esc(open) + '" target="_blank" rel="noopener">Open on Bilibili ↗</a></p>' +
+        "</div>";
+    }
+    if (e.type === "pico8" && e.pid) {
+      var src = "https://www.lexaloffle.com/bbs/widget.php?pid=" + encodeURIComponent(e.pid);
+      var open = e.url || (e.tid ? "https://www.lexaloffle.com/bbs/?tid=" + encodeURIComponent(e.tid) : src);
+      return '<div class="video pico8">' +
+        '<iframe src="' + esc(src) + '" allow="autoplay; gamepad; fullscreen" allowfullscreen title="' + esc(p.title) + ' — play in browser"></iframe>' +
+        '<p class="video-note"><a href="' + esc(open) + '" target="_blank" rel="noopener">Open on PICO-8 BBS ↗</a></p>' +
         "</div>";
     }
     return "";
